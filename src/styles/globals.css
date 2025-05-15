@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1F2937;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #1F2937;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.text-gray {
+  color: rgba(255, 255, 255, 0.16);
+}
+
+.bg-gray-color {
+  background-color: rgba(0, 0, 0, 0.16);
+}
+
+.lr-shadow {
+  box-shadow: -4px 0 8px -4px rgba(0, 0, 0, 0.3), 4px 0 8px -4px rgba(0, 0, 0, 0.3);
+}
+
+.xl-shadow {
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.18);
+}
+
+.home-filter-tab span.absolute {
+  width: 40% !important;
+  height: 4px !important;
+  border-radius: 20px !important;
+  margin-left: 10% !important;
+  border-color: transparent !important;
+}
+
+@media (width >= 640px) {
+  .container {
+      max-width: 768px !important;
+  }
+}
+
+@media (width >= 768px) {
+  .container {
+      max-width: 1025px !important;
+  }
+}
+
+@media (width >= 1024px) {
+  .container {
+      max-width: 1200px !important;
+  }
+}
+
+
+.embla_container {
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+/* custom-vertical-scollbar */
+
+.custom-vertical-scollbar::-webkit-scrollbar {
+  height: 5px;
+}
+
+.custom-vertical-scollbar::-webkit-scrollbar-thumb {
+  background-color: #FF3D90;
+  height: 5px;
+  border-radius: 10px;
+}
+
+.custom-vertical-scollbar::-webkit-scrollbar-track {
+  background-color: #FFE5F0;
+  height: 5px;
+}

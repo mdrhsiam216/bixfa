@@ -1,0 +1,1 @@
+All general pages will be here
