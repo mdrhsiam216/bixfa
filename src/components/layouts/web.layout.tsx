@@ -1,12 +1,12 @@
 "use client";
 
-import Header from "@/components/layouts/header/header";
-import Footer from "@/components/layouts/footer/footer.main";
+import Footer from "./footer/footer.main";
+import Header from "./header/header";
 
 export default function WebLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Header />
+      <Header/>
       {children}
       <Footer />
     </>

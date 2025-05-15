@@ -1,83 +1,94 @@
-"use client";
-
-import { Image } from "@heroui/react";
-import FooterColumn from "@/components/layouts/footer/footer.column";
-import Link from "next/link";
-import {
-  aboutLinks,
-  productLinks,
-  resourcesLinks,
-  useCaseLinks,
-} from "@/dto/common/footer.data";
+import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col h-fit min-w-full bg-dark-700 pt-5  px-10 gap-16 md:pt-20 md:h-[446px] md:px-20">
-      {/* top */}
-      <div className="w-full grid gap-4 md:grid-cols-5 grid-cols-2 ml-7 md:h-56 md:gap-20">
-        <Link href="/" className="w-full h-full grid grid-cols-1 gap-4">
-          <Image
-            src="/icons/logo_full_white.png"
-            alt="Company Logo"
-            className="w-40 cursor-pointer "
-          />
-        </Link>
-        <div className="md:hidden"></div>
+    <>
+      <footer className="bg-[#2d2d2d] text-white font-sans">
+        {/* Email Section */}
+        <div className="text-center py-10">
+          <div className="w-1/2 h-px bg-white mx-auto opacity-50"></div>
+          <p className="text-[80px] font-serif font-bold my-2">
+            support@bixfa.com
+          </p>
+          <div className="w-1/2 h-px bg-white mx-auto opacity-50"></div>
+        </div>
 
-        <FooterColumn title="Product" links={productLinks} />
-        <FooterColumn title="Use Cases" links={useCaseLinks} />
-        <FooterColumn title="Resources" links={resourcesLinks} />
-        <FooterColumn title="About" links={aboutLinks} />
-      </div>
+        {/* Main Footer */}
+        <div className="flex justify-between flex-wrap max-w-[1200px] mx-auto px-5">
+          {/* Left */}
+          <div className="flex-1 m-2 text-left">
+            <h2 className="text-2xl font-serif font-bold mb-2">Bixfa</h2>
+            <p className="text-base font-serif text-[#bbb]">
+              We can create solutions that elevate growth and sales.
+            </p>
+          </div>
 
-      {/* bottom */}
-      <div className="w-full flex flex-col border-t border-white/20 py-4 mx-auto justify-center items-center md:h-[84px] md:flex-row md:justify-between md:py-8 gap-4 md:gap-0">
-        <div className="text-sm text-white-600 flex gap-6 cursor-pointer ">
-          <div className="hover:text-white transition-all duration-200">
-            Terms & Conditions
+          {/* Services */}
+          <div className="flex-1 m-2 text-left">
+            <h3 className="text-xl font-serif mb-2">Services</h3>
+            <div className="w-1/2 h-px bg-white my-2 opacity-100"></div>
+            <ul className="list-none pl-0">
+              {["Email Marketing", "Campaigns", "Branding", "Offline"].map(
+                (item) => (
+                  <li
+                    key={item}
+                    className="text-base font-serif text-[#bbb] my-1 hover:text-[#f0a500]"
+                  >
+                    {item}
+                  </li>
+                )
+              )}
+            </ul>
           </div>
-          <div className="hover:text-white transition-all duration-200">
-            Cookies
+
+          {/* Links */}
+          <div className="flex-1 m-2 text-left">
+            <h3 className="text-xl font-serif mb-2">Links</h3>
+            <div className="w-1/2 h-px bg-white my-2 opacity-100"></div>
+            <ul className="list-none pl-0">
+              {[
+                "About",
+                "Portfolios",
+                "Services",
+                "Testimonials",
+                "Careers",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="text-base font-serif text-[#bbb] my-1 hover:text-[#f0a500]"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="hover:text-white transition-all duration-200">
-            Privacy Policy
+
+          {/* Address */}
+          <div className="flex-1 m-2 text-left">
+            <h3 className="text-xl font-serif mb-2">Address</h3>
+            <div className="w-1/2 h-px bg-white my-2 opacity-100"></div>
+            <ul className="list-none pl-0">
+              <li className="text-base font-serif text-[#bbb] my-1 hover:text-[#f0a500]">
+                785 15th Street, Office 478 Berlin
+              </li>
+              <li className="text-base font-serif text-[#bbb] my-1 hover:text-[#f0a500]">
+                De 81566 (704) 555-0127
+              </li>
+              <li className="text-base font-serif text-[#bbb] my-1 hover:text-[#f0a500]">
+                contact@bixfa.com
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* right side logos */}
-        <div className="flex gap-6 sm:mt-6 md:mt-0">
-          <Image
-            src="/icons/footerIcons/fb.svg"
-            alt="Social"
-            className="cursor-pointer h-4 rounded-none"
-          />
-          <Image
-            src="/icons/footerIcons/tw.svg"
-            alt="Social"
-            className="cursor-pointer h-4 rounded-none"
-          />
-          <Image
-            src="/icons/footerIcons/internet.svg"
-            alt="Social"
-            className="cursor-pointer h-4 rounded-none"
-          />
-          <Image
-            src="/icons/footerIcons/insta.svg"
-            alt="Social"
-            className="cursor-pointer h-4 rounded-none"
-          />
-          <Image
-            src="/icons/footerIcons/linkedin.svg"
-            alt="Social"
-            className="cursor-pointer h-4 rounded-none"
-          />
-          <Image
-            src="/icons/footerIcons/yt.svg"
-            alt="Social"
-            className="cursor-pointer h-4 rounded-none"
-          />
+        {/* Bottom */}
+        <div className="text-center mt-5 mb-5">
+          <div className="w-full h-px bg-white opacity-30 my-5"></div>
+          <p className="text-[12px] text-[#bbb]">
+            © Copyright 2025 Green-Touch. All Rights Reserved.
+          </p>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }
