@@ -6,6 +6,7 @@ import Hero from "@/components/home/hero";
 import ProjectsSecondSection from "@/components/home/projects-second-section";
 import ProjectsShowcase from "@/components/home/ProjectsShowcase";
 import Services from "@/components/home/services";
+import Testimonials from "@/components/home/testimonials";
 import WebLayout from "@/components/layouts/web.layout";
 import { Button } from "@heroui/react";
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <ProjectsShowcase/>
         <ProjectsSecondSection/>
         <AwardsTimeline/>
+        <Testimonials/>
       </WebLayout>
     </>
   );
