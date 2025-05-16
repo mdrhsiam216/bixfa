@@ -1,5 +1,6 @@
 'use client'
 import AwardsTimeline from "@/components/home/awards-timeline";
+import Blog from "@/components/home/blog";
 import Explore from "@/components/home/explore";
 import GraphicWebSection from "@/components/home/graphic-web-section";
 import Hero from "@/components/home/hero";
@@ -21,6 +22,7 @@ export default function Home() {
         <ProjectsSecondSection/>
         <AwardsTimeline/>
         <Testimonials/>
+        <Blog/>
       </WebLayout>
     </>
   );
