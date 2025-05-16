@@ -1,4 +1,5 @@
 'use client'
+import AwardsTimeline from "@/components/home/awards-timeline";
 import Explore from "@/components/home/explore";
 import GraphicWebSection from "@/components/home/graphic-web-section";
 import Hero from "@/components/home/hero";
@@ -17,6 +18,7 @@ export default function Home() {
         <Explore/>
         <ProjectsShowcase/>
         <ProjectsSecondSection/>
+        <AwardsTimeline/>
       </WebLayout>
     </>
   );
