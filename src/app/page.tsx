@@ -2,6 +2,7 @@
 import Explore from "@/components/home/explore";
 import GraphicWebSection from "@/components/home/graphic-web-section";
 import Hero from "@/components/home/hero";
+import ProjectsSecondSection from "@/components/home/projects-second-section";
 import ProjectsShowcase from "@/components/home/ProjectsShowcase";
 import Services from "@/components/home/services";
 import WebLayout from "@/components/layouts/web.layout";
@@ -15,6 +16,7 @@ export default function Home() {
         <GraphicWebSection/>
         <Explore/>
         <ProjectsShowcase/>
+        <ProjectsSecondSection/>
       </WebLayout>
     </>
   );
